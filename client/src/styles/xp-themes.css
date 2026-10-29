@@ -1,0 +1,171 @@
+/* ------------------------------------------------------------------ */
+/* Temas Luna de Windows XP                                           */
+/*                                                                    */
+/* xp.css solo incluye el tema Luna azul. Plata y Oliva se recrean    */
+/* sobrescribiendo los mismos estilos de .window / .title-bar.        */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------- Plata ---------------------------- */
+
+[data-xp-theme='silver'] .window {
+  box-shadow:
+    inset -1px -1px #6f6f6f,
+    inset 1px 1px #fdfdfd,
+    inset -2px -2px #9c9c9c,
+    inset 2px 2px #efefef,
+    inset -3px -3px #b8b8b8,
+    inset 3px 3px #dedede;
+}
+
+[data-xp-theme='silver'] .title-bar {
+  background: linear-gradient(
+    180deg,
+    #fdfdfd 0%,
+    #f0f0f0 8%,
+    #e6e6e6 40%,
+    #f6f6f6 88%,
+    #f6f6f6 93%,
+    #e9e9e9 95%,
+    #d2d2d2 96%,
+    #d2d2d2 100%
+  );
+  border-top-color: #fdfdfd;
+  border-left-color: #fdfdfd;
+  border-right-color: #8a8a8a;
+  border-bottom-color: #8a8a8a;
+  text-shadow: 1px 1px #ffffff;
+}
+
+[data-xp-theme='silver'] .title-bar-text {
+  color: #111;
+}
+
+[data-xp-theme='silver'] .title-bar-controls button {
+  background-color: #7f9ed4;
+}
+
+/* ------------------------------- Oliva ---------------------------- */
+
+[data-xp-theme='olive'] .window {
+  box-shadow:
+    inset -1px -1px #4f5a3f,
+    inset 1px 1px #d8e0c8,
+    inset -2px -2px #75835f,
+    inset 2px 2px #c2cfae,
+    inset -3px -3px #8a9a72,
+    inset 3px 3px #a9b894;
+}
+
+[data-xp-theme='olive'] .title-bar {
+  background: linear-gradient(
+    180deg,
+    #b9caa3 0%,
+    #9caf82 8%,
+    #8fa574 40%,
+    #a9bc8f 88%,
+    #a9bc8f 93%,
+    #97aa7c 95%,
+    #71805a 96%,
+    #71805a 100%
+  );
+  border-top-color: #b9caa3;
+  border-left-color: #b9caa3;
+  border-right-color: #5f6c4b;
+  border-bottom-color: #5f6c4b;
+  text-shadow: 1px 1px #4f5a3f;
+}
+
+[data-xp-theme='olive'] .title-bar-text {
+  color: #fff;
+}
+
+[data-xp-theme='olive'] .title-bar-controls button {
+  background-color: #71805a;
+}
+
+/* --------------------------- Taskbar Plata ------------------------ */
+
+[data-xp-theme='silver'] .xp-taskbar {
+  border-top-color: #fff;
+  background: linear-gradient(
+    180deg,
+    #f7f7f7 0%,
+    #dedede 8%,
+    #d7d7d7 40%,
+    #efefef 88%,
+    #c9c9c9 100%
+  );
+  box-shadow: inset 0 1px #fff;
+  color: #222;
+}
+
+[data-xp-theme='silver'] .xp-tray {
+  border-left-color: #a0a0a0;
+  background: linear-gradient(180deg, #efefef 0%, #cfcfcf 100%);
+  box-shadow: inset 1px 0 #fff;
+  color: #222;
+}
+
+[data-xp-theme='silver'] .xp-tray__theme {
+  border-color: #9a9a9a;
+  background: linear-gradient(180deg, #fbfbfb 0%, #d9d9d9 100%);
+  box-shadow: inset 1px 1px #fff;
+  color: #222;
+}
+
+[data-xp-theme='silver'] .xp-task {
+  background: linear-gradient(180deg, #fbfbfb 0%, #dcdcdc 100%);
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #9a9a9a;
+  color: #222;
+}
+
+[data-xp-theme='silver'] .xp-tray__clock {
+  text-shadow: 1px 1px #fff;
+}
+
+/* --------------------------- Taskbar Oliva ------------------------ */
+
+[data-xp-theme='olive'] .xp-taskbar {
+  border-top-color: #cbd8b8;
+  background: linear-gradient(
+    180deg,
+    #b6c69f 0%,
+    #93a67b 8%,
+    #8a9d72 40%,
+    #a8ba8e 88%,
+    #71805a 100%
+  );
+}
+
+[data-xp-theme='olive'] .xp-tray {
+  border-left-color: #5f6c4b;
+  background: linear-gradient(180deg, #93a67b 0%, #71805a 100%);
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+[data-xp-theme='olive'] .xp-tray__theme {
+  border-color: #5f6c4b;
+  background: linear-gradient(180deg, #a9bc8f 0%, #7d8f6a 100%);
+  color: #fff;
+}
+
+[data-xp-theme='olive'] .xp-task {
+  background: linear-gradient(180deg, #a9bc8f 0%, #7d8f6a 100%);
+  box-shadow:
+    inset 1px 1px rgba(255, 255, 255, 0.35),
+    inset -1px -1px #5f6c4b;
+  color: #fff;
+}
+
+/* ------------------------- Personalizado -------------------------- */
+
+/*
+ * El modo custom rota el tono de las ventanas con hue-rotate().
+ * Se aplica solo a las ventanas del escritorio para que la taskbar
+ * y el panel de temas sigan siendo legibles.
+ */
+[data-xp-theme='custom'] .xp-screen .window {
+  filter: hue-rotate(var(--xp-hue, 0deg));
+}
